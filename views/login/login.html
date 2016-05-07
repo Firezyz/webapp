@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>登录/注册</title>
+	<meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <style type="text/css">
+    	html {-ms-touch-action: none;}
+        *{-webkit-tap-highlight-color:rgba(255,255,255,0);}
+        html,body,header,section,footer,div,h1,h2,dl,dt,dd,ul,li,p,a,b,i{margin: 0;padding: 0;box-sizing:border-box;-webkit-user-select:none;font-size: 50px;}
+        body{font-family: \5FAE\8F6F\96C5\9ED1,"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:12px;padding: 0.5rem;background-image: url('http://7xt2qz.com1.z0.glb.clouddn.com/aff60bc6526e571b183d5ae32be2899a.jpeg'); }
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        img{display: block;margin: 0px;padding: 0px;width: 100%;}
+        .form-con{
+        	overflow: hidden;
+		    /*width: 7rem;*/
+		    margin: 0 auto;
+		    margin-top: 1rem;
+		    background-color: rgba(0,0,0,0.15);
+		    border-radius: 0.4rem;
+		    padding: 1rem;
+		    color: #fff;
+        }
+        span{
+        	font-size: 0.33rem;
+        	float: left; 
+        }
+        input{width: 3rem;float: right;}
+        button{
+        	width: 4.5rem;
+		    height: 0.7rem;
+		    display: block;
+		    margin: 0 auto;
+		    margin-top: 0.2rem;
+		    background-color: #ccc;
+		    color: #fff;
+		}
+		.back{
+		    width: 0.6rem;
+		    padding-bottom: 0.5rem;
+		    margin-top: -0.4rem;
+		}
+        
+    </style>
+</head>
+<body>
+	<div class="form-con" id="login">
+		<span>用户名</span>
+		<input type="text" id="user-name">
+		</br>
+		<span>密码</span>
+		<input type="password" id="password">
+		<p style="clear:both"></p>
+		<button style="margin-top:1.5rem" id="login-btn">登录</button>
+		<button id="register-btn">注册</button>
+	</div>
+
+	<div class="form-con" id="register" style="display:none">
+		<img src="http://7xt2qz.com1.z0.glb.clouddn.com/left.png" class="back" id="back-btn">
+		<span>用户名</span>
+		<input type="text" id="rjname">
+		</br>
+		<span>邮箱</span>
+		<input type="email" id="rjemail">
+		</br>
+		<span >密码</span>
+		<input type="password" id="set-pwd">
+		</br>
+		<span >确认密码</span>
+		<input type="password" id="reset-pwd">
+		<p style="clear:both"></p>
+		<button style="margin-top:1.5rem" id="submit-btn">提交</button>	
+	</div>
+	
+	<script type="text/javascript" src="http://s.momocdn.com/w/js/2015/12/10/1449717535115-JPb9d99c9c342acbbb746afca6fd149715.js"></script>     <!-- zepto -->
+	<script type="text/javascript">
+		$(function(){
+			var w = $(window).width();
+			var x = (w/375)*50;
+			$('html').css('font-size',x+'px');
+
+			var h = $(window).height();
+			$('body').css('background-size','100% '+h+'px');
+
+			$('#register-btn').click(function(){
+				$('#login').hide();
+				$('#register').show();
+			})
+			$('#back-btn').click(function(){
+				$('#login').show();
+				$('#register').hide();
+			})
+			$('#submit-btn').click(function(){
+				var str1 = $('#set-pwd').val();
+				var str2 = $('#reset-pwd').val();
+				var str3 = $('#rjname').val();
+				var str4 = $('#rjemail').val();
+				if(str1==str2){
+					$.ajax({
+						type:'post',
+						url:'',
+						data:{
+							'name':str3,
+							'email':str4,
+							'pwd':str1
+						},
+						success:function(){
+
+						},
+						error:function(){
+							
+						}
+					})
+				}else{
+					alert('两次输入的密码不一致！');
+					$('#set-pwd').val('').focus();
+					$('#reset-pwd').val('');
+				}
+			})
+
+			$('#login-btn').click(function(){
+				var name = $('#user-name').val();
+				var pwd = $('#password').val();
+				$.ajax({
+					type:'post',
+					url:'',
+					data:{
+						'userName':name,
+						'pwd':pwd
+					},
+					success:function(){
+
+					},
+					error:function(){
+
+					}
+
+				})
+			})
+
+			
+
+
+		})
+	</script>
+</body>
+</html>

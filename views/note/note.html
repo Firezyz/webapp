@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>笔记本</title>
+	<meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <style type="text/css">
+    	html {-ms-touch-action: none;}
+        *{-webkit-tap-highlight-color:rgba(255,255,255,0);}
+        html,body,header,section,footer,div,h1,h2,dl,dt,dd,ul,li,p,a,b,i{margin: 0;padding: 0;box-sizing:border-box;-webkit-user-select:none;font-size: 50px;}
+        body{font-family: \5FAE\8F6F\96C5\9ED1,"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:12px;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        img{display: block;margin: 0px;padding: 0px;width: 100%;}
+        .menu{
+        	background-color:rgba(0,0,0,0.5);
+        	position: fixed;
+        	bottom: 0;
+        	width: 100%;
+        	height: 1.2rem;
+        	overflow: hidden;
+        }
+        .menu img{
+        	width: 0.7rem;
+		    height: 0.7rem;
+		    margin-top: 0.25rem;
+		    margin-left: 0.67rem;
+		    float: left;
+        }
+        .buttom-null{
+        	width: 100%;
+        	height: 1.2rem;
+        }
+        .note-con{
+        	font-size: 0.35rem;
+		    padding: 0.5rem;
+		    margin: 0.2rem;
+		    border-radius: 0.2rem;
+		    background-color: #DCEFFF;
+        }
+        .note-con p{
+        	font-size: 0.4rem;
+        	line-height: 0.7rem;
+        }
+        .note-con input[type='date']{
+        	width: 2.5rem
+        }
+        .note-con input[type="text"]{
+        	width: 1rem;
+        }
+        .note-con input{
+        	height: 0.5rem;
+    		font-size: 0.27rem;
+        }
+        .save-btn{
+        	display: block;
+        	width: 80%;
+        	height: 0.6rem;
+        	margin: 0 auto;
+        	background-color: #2098FF;
+        	color: #fff;
+        	border-radius: 0.1rem;
+        	border: #fff;
+        	margin-top: 0.2rem;
+        }
+        .info{
+        	display: inline-block;
+		    font-size: 0.4rem;
+		    margin-left: 0.2rem;
+		    background-color: #B5C9FF;
+		    width: 1.5rem;
+		    height: 0.6rem;
+		    line-height: 0.6rem;
+		    text-align: center;
+		    color: #fff;
+		}
+        .chart{
+        	display: inline-block;
+		    font-size: 0.4rem;
+		    background-color: #75BFFF;
+		    width: 1.5rem;
+		    height: 0.6rem;
+		    line-height: 0.6rem;
+		    text-align: center;
+		    color: #fff;
+        }
+        .info-list{
+        	padding-top: 0.2rem;
+		    border: 0.1rem solid #B5C9FF;
+		    margin-left: 0.2rem;
+		    margin-right: 0.2rem;
+        }
+        .info-list li{
+        	font-size: 0.35rem;
+        	border-bottom: 1px solid #B5C9FF;
+        	padding-top: 0.4rem;
+        }
+        .info-list li span{
+        	padding-left: 0.5rem;
+        }
+        .chat-con{
+        	padding-top: 0.2rem;
+		    border: 0.1rem solid #75BFFF;
+		    margin-left: 0.2rem;
+		    margin-right: 0.2rem;
+		    width: 7.13rem;
+    		height: 7.5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="note-con">
+	<p>记一笔</p>
+	<input type="date" id="date">
+	<select>
+		<option>一般</option>
+		<option>餐饮</option>
+		<option>交通</option>
+		<option>水果</option>
+		<option>零食</option>
+		<option>衣服鞋包</option>
+		<option>生活用品</option>
+		<option>话费</option>
+		<option>护肤彩妆</option>
+		<option>药品</option>
+		<option>还钱</option>
+	</select>
+	<input type="text">
+	<span>元</span>
+	<button class="save-btn">保存</button>
+</div>
+<span class="info" id="info-btn">明细</span>
+<span class='chart' id="chart-btn">统计图</span>
+<ul class="info-list" id="info-list">
+	<li>
+		<span>2012/10/10</span><span>衣服鞋包</span><span>100.00元</span>
+	</li>
+	<li>
+		<span>2012/10/10</span><span>药品</span><span>100.00元</span>
+	</li>
+	<li>
+		<span>2012/10/10</span><span>还钱</span><span>100.00元</span>
+	</li>
+	<li>
+		<span>2012/10/10</span><span>餐饮</span><span>100.00元</span>
+	</li>
+</ul>
+
+<div class="chat-con" style="display:none" id="chart-con">
+	
+</div>
+
+<div class="buttom-null"></div>
+	<div class="menu">
+		<a href="../talk/talkList.html"><img src="http://7xt2qz.com1.z0.glb.clouddn.com/talk.png"></a>
+		<a href="../tie/tieList.html"><img src="http://7xt2qz.com1.z0.glb.clouddn.com/tie.png"></a>
+		<a href="../zanzan/zanzan.html"><img src="http://7xt2qz.com1.z0.glb.clouddn.com/zan1b1_02.png"></a>
+		<a href=""><img src="http://7xt2qz.com1.z0.glb.clouddn.com/note1b1_01.png"></a>
+		<a href="../user/user.html"><img style="width:0.8rem" src="http://7xt2qz.com1.z0.glb.clouddn.com/new-user_03.png"></a>
+	</div>
+<script type="text/javascript" src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+
+
+<script type="text/javascript">
+	$(function(){
+        var w=$(window).width();
+        var x=(w/375)*50;
+        $('html').css('font-size',x+'px');
+
+        $('#info-btn').click(function(){
+        	$('#info-list').css('display','block');
+        	$('#chart-con').css('display','none');
+        })
+         $('#chart-btn').click(function(){
+        	$('#info-list').css('display','none');
+        	$('#chart-con').css('display','block');
+        })
+
+    
+
+    $('#chart-con').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false
+        },
+        title: {
+            text: ' '
+        },
+        tooltip: {
+    	    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        credits:false,
+        plotOptions: {
+            pie: {
+            	size:'95%',
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    distance: -20,
+                    color: '#000000',
+                    connectorColor: '#000000',
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                },
+                 
+                 style: {                              
+                        fontSize: '15px',  
+                        lineHeight: '25px'  
+                    }
+
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Browser share',
+            data: [
+                ['Firefox',   45.0],
+                ['IE',       26.8],
+                {
+                    name: 'Chrome',
+                    y: 12.8,
+                    sliced: true,
+                    selected: true
+                },
+                ['Safari',    8.5],
+                ['Opera',     6.2],
+                ['Others',   0.7]
+            ]
+        }]
+    });
+
+    })				
+</script>
+</body>
+</html>

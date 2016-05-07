@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>编辑资料</title>
+	<meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <style type="text/css">
+    	html {-ms-touch-action: none;}
+        *{-webkit-tap-highlight-color:rgba(255,255,255,0);}
+        html,body,header,section,footer,div,h1,h2,dl,dt,dd,ul,li,p,a,b,i{margin: 0;padding: 0;box-sizing:border-box;-webkit-user-select:none;font-size: 50px;}
+        body{font-family: \5FAE\8F6F\96C5\9ED1,"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:12px;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        img{display: block;margin: 0px;padding: 0px;width: 100%;}
+        .menu{
+        	background-color:rgba(0,0,0,0.5);
+        	position: fixed;
+        	bottom: 0;
+        	width: 100%;
+        	height: 1.2rem;
+        	overflow: hidden;
+        }
+        .menu img{
+        	width: 0.7rem;
+		    height: 0.7rem;
+		    margin-top: 0.25rem;
+		    margin-left: 0.67rem;
+		    float: left;
+        }
+        .buttom-null{
+        	width: 100%;
+        	height: 1.2rem;
+        }
+        .banner{
+        	background-image: url('http://7xt2qz.com1.z0.glb.clouddn.com/new-banner_02.png');
+		    background-size: 100%;
+		    padding-top: 1.5rem;
+		    padding-bottom: 0.3rem;
+		    position: fixed;
+		    top: 0;
+		    width: 100%;
+
+        }
+       
+        .empty-div{
+        	height: 2rem;
+        }
+        .info{
+        	padding-left: 0.5rem;
+        }
+        .info li{
+        	font-size: 0.3rem;
+		    line-height: 0.45rem;
+		    margin-top: 0.15rem;
+		    color: #797979;
+
+        }
+        .info li span{
+        	font-size: 0.3rem;
+		    color: #0A80DE;
+		    display: inline-block;
+		    width: 1.8rem;
+        }
+        .topic-list{
+        	width: 100%;
+        	padding: 0.5rem;
+        	padding-top: 0.1rem
+        }
+        .topic-list p{
+        	border: 1px solid #ccc;
+        	width: 100%;
+        	border-radius: 0.1rem;
+        	box-shadow: 5px 5px 2px #888888;
+        	padding: 0.1rem;
+        	position: relative;
+        	overflow: hidden;
+        	height: 1rem;
+        	line-height: 0.6rem;
+        	margin-bottom: 0.3rem;
+        }
+        .topic-list p span:first-child{
+        	font-size: 0.3rem;
+        	color:  #0A80DE;
+        	width: 60%;
+        	overflow: hidden;
+        	white-space: nowrap;
+		    text-overflow: ellipsis;
+		    display: inline-block;
+		    line-height: 0.6rem
+
+        }
+        .topic-list p span:nth-child(2){
+        	font-size: 0.2rem;
+        	color: #888;
+        	display: inline-block;
+        	margin-left: 1.2rem
+        }
+        .del-btn{
+        	width: 0.5rem;
+		    position: absolute;
+		    right: 0.02rem;
+		    top: 0.02rem;
+        }
+        .edit-btn{
+		    width: 0.7rem;
+		    top: 0.3rem;
+		    position: absolute;
+		    right: 0.3rem;
+		    -webkit-animation-name:anim;
+		    -webkit-animation-duration:1s;
+		    -webkit-animation-timing-funciton:linear;
+		    -webkit-animation-direction:alternate;
+		    -webkit-animation-iteration-count:infinite;
+		}
+		@-webkit-keyframes anim{
+			0% {
+				filter:alpha(opacity=0);  
+		      	-moz-opacity:0;  
+		      	-khtml-opacity: 0;  
+		      	opacity: 0;  
+			}
+			100% {
+				filter:alpha(opacity=100);  
+		      	-moz-opacity:1;  
+		      	-khtml-opacity: 1;  
+		      	opacity: 1;  
+			}
+			
+		}
+
+    </style>
+</head>
+<body>
+<div class="banner">
+	<img src="http://7xt2qz.com1.z0.glb.clouddn.com/ok.png" class="edit-btn">	
+</div>
+<div class="empty-div"></div>
+<ul class="info">
+	<li>
+		<span>昵称：</span>
+		<input type="text" value="徐文琪">
+	</li>
+	<li>
+		<span>新头像：</span>
+		<input type="file" >
+	</li>
+	<li>
+		<span>个性签名：</span>
+		<textarea style="width:4.5rem">少爷和主子相亲相爱！抱抱~少爷和主子相亲相爱！抱抱~</textarea> 
+	</li>
+	<li>
+		<span>兴趣爱好：</span>
+		<input type="text" value="胡吃海塞">
+	</li>
+	<li>
+		<span>性别：</span>
+		<select>
+			<option>男</option>
+			<option>女</option>
+			<option>保密</option>
+		</select>
+	</li>
+	<li>
+		<span>年龄：</span>
+		<input type="text" value="17">
+	</li>
+	<li>
+		<span>出生日期：</span>
+		<input type="date" value="2012/10/10">
+	</li>
+	<li>
+		<span>邮箱：</span>
+		<input type="text" value="1003134509@qq.com">
+	</li>
+	<li>
+		<span>所在地：</span>
+		<select>
+			<option>前卫校区</option>
+			<option>朝阳校区</option>
+			<option>新民校区</option>
+			<option>南湖校区</option>
+			<option>南岭校区</option>
+			<option>和平校区</option>
+		</select>
+	</li>
+	<li>
+		<span>学院：</span>
+		<input type="text" value="软件学院">
+	</li>
+	<li>
+		<span>我的话题：</span>
+	</li>
+	
+</ul>
+<div class="topic-list">
+		<p><span>标题标题标题标题标题标题标题标题标题</span><span>2012/10/10</span><img class="del-btn" src="http://7xt2qz.com1.z0.glb.clouddn.com/red-delete.png"></p>
+		<p><span>标题标题标题标题标题标题标题标题标题</span><span>2012/10/10</span><img class="del-btn" src="http://7xt2qz.com1.z0.glb.clouddn.com/red-delete.png"></p>
+		<p><span>标题标题标题标题标题标题标题标题标题</span><span>2012/10/10</span><img class="del-btn" src="http://7xt2qz.com1.z0.glb.clouddn.com/red-delete.png"></p>
+		<p><span>标题标题标题标题标题标题标题标题标题</span><span>2012/10/10</span><img class="del-btn" src="http://7xt2qz.com1.z0.glb.clouddn.com/red-delete.png"></p>
+</div>
+
+<div class="buttom-null"></div>
+	<div class="menu">
+		<img src="http://7xt2qz.com1.z0.glb.clouddn.com/talk.png">
+		<img src="http://7xt2qz.com1.z0.glb.clouddn.com/tie.png">
+		<img src="http://7xt2qz.com1.z0.glb.clouddn.com/zan1b1_02.png">
+		<img src="http://7xt2qz.com1.z0.glb.clouddn.com/note1b1_01.png">
+		<img style="width:0.8rem" src="http://7xt2qz.com1.z0.glb.clouddn.com/new-user_03.png">
+	</div>
+<script type="text/javascript" src="http://s.momocdn.com/w/js/2015/12/10/1449717535115-JPb9d99c9c342acbbb746afca6fd149715.js"></script>     <!-- zepto -->
+<script type="text/javascript">
+	$(function(){
+        var w=$(window).width();
+        var x=(w/375)*50;
+        $('html').css('font-size',x+'px');
+    })
+</script>
+</body>
+</html>

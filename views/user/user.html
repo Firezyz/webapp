@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>我的资料</title>
+	<meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <style type="text/css">
+    	html {-ms-touch-action: none;}
+        *{-webkit-tap-highlight-color:rgba(255,255,255,0);}
+        html,body,header,section,footer,div,h1,h2,dl,dt,dd,ul,li,p,a,b,i{margin: 0;padding: 0;box-sizing:border-box;-webkit-user-select:none;font-size: 50px;}
+        body{font-family: \5FAE\8F6F\96C5\9ED1,"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:12px;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        img{display: block;margin: 0px;padding: 0px;width: 100%;}
+        .menu{
+        	background-color:rgba(0,0,0,0.5);
+        	position: fixed;
+        	bottom: 0;
+        	width: 100%;
+        	height: 1.2rem;
+        	overflow: hidden;
+        }
+        .menu img{
+        	width: 0.7rem;
+		    height: 0.7rem;
+		    margin-top: 0.25rem;
+		    margin-left: 0.67rem;
+		    float: left;
+        }
+        .buttom-null{
+        	width: 100%;
+        	height: 1.2rem;
+        }
+        .banner{
+        	background-image: url('http://7xt2qz.com1.z0.glb.clouddn.com/new-banner_02.png');
+        	background-size: 100%;
+        	padding-top: 1.7rem;
+    		padding-bottom: 0.3rem;
+    		position: fixed;
+    		top: 0;
+    		width: 100%;
+
+        }
+        .user-head{
+        	width: 2rem;
+        	height: 2rem;
+        	border-radius: 50%;
+        	border:5px solid #ccc;
+        	margin:0 auto;
+        }
+        .empty-div{
+        	height: 4.3rem;
+        }
+        .info{
+        	padding-left: 0.5rem;
+        }
+        .info li{
+        	font-size: 0.3rem;
+		    line-height: 0.45rem;
+		    margin-top: 0.15rem;
+		    color: #797979;
+
+        }
+        .info li span{
+        	font-size: 0.3rem;
+		    color: #0A80DE;
+		    display: inline-block;
+		    width: 1.8rem;
+        }
+        .topic-list{
+        	width: 100%;
+        	padding: 0.5rem;
+        	padding-top: 0.1rem
+        }
+        .topic-list p{
+        	border: 1px solid #ccc;
+        	width: 100%;
+        	border-radius: 0.1rem;
+        	box-shadow: 5px 5px 2px #888888;
+        	padding: 0.1rem;
+        	position: relative;
+        	overflow: hidden;
+        	height: 1rem;
+        	line-height: 0.6rem;
+        	margin-bottom: 0.3rem;
+        }
+        .topic-list p span:first-child{
+        	font-size: 0.3rem;
+        	color:  #0A80DE;
+        	width: 60%;
+        	overflow: hidden;
+        	white-space: nowrap;
+		    text-overflow: ellipsis;
+		    display: inline-block;
+		    line-height: 0.6rem
+
+        }
+        .topic-list p span:last-child{
+        	font-size: 0.2rem;
+        	color: #ccc;
+        	display: inline-block;
+        	margin-left: 1.2rem
+        }
+        .edit-btn{
+        	width: 0.6rem;
+		    top: 0.3rem;
+		    position: absolute;
+		    right: 0.3rem;
+		}
+        
+    </style>
+</head>
+<body>
+<div class="banner">
+	<a href="editUser.html"><img src="http://7xt2qz.com1.z0.glb.clouddn.com/tie.png" class="edit-btn"></a>
+	<img class="user-head" src="http://7xt2qz.com1.z0.glb.clouddn.com/girl.jpg">
+</div>
+<div class="empty-div"></div>
+<ul class="info">
+	<li>
+		<span>昵称：</span>徐文琪
+	</li>
+	<li>
+		<span>个性签名：</span>少爷和主子相亲相爱！抱抱~少爷和主子相亲相爱！抱抱~
+	</li>
+	<li>
+		<span>兴趣爱好：</span>胡吃海塞
+	</li>
+	<li>
+		<span>性别：</span>女
+	</li>
+	<li>
+		<span>年龄：</span>17
+	</li>
+	<li>
+		<span>出生日期：</span>1993/12/24
+	</li>
+	<li>
+		<span>邮箱：</span>1003134509@qq.com
+	</li>
+	<li>
+		<span>所在地：</span>前卫校区
+	</li>
+	<li>
+		<span>学院：</span>软件学院
+	</li>
+	<li>
+		<span>我的话题：</span>
+	</li>
+	
+</ul>
+<div class="topic-list">
+		<p><span>标题标题标题标题标题标题标题标题标题</span><span>2012/10/10</span></p>
+		<p><span>标题标题标题标题标题标题标题标题标题</span><span>2012/10/10</span></p>
+		<p><span>标题标题标题标题标题标题标题标题标题</span><span>2012/10/10</span></p>
+		<p><span>标题标题标题标题标题标题标题标题标题</span><span>2012/10/10</span></p>
+</div>
+
+<div class="buttom-null"></div>
+	<div class="menu">
+		<a href="../talk/talkList.html"><img src="http://7xt2qz.com1.z0.glb.clouddn.com/talk.png"></a>
+		<a href="../tie/tieList.html"><img src="http://7xt2qz.com1.z0.glb.clouddn.com/tie.png"></a>
+		<a href="../zanzan/zanzan.html"><img src="http://7xt2qz.com1.z0.glb.clouddn.com/zan1b1_02.png"></a>
+		<a href="../note/note.html"><img src="http://7xt2qz.com1.z0.glb.clouddn.com/note1b1_01.png"></a>
+		<a href=""><img style="width:0.8rem" src="http://7xt2qz.com1.z0.glb.clouddn.com/new-user_03.png"></a>
+	</div>
+<script type="text/javascript" src="http://s.momocdn.com/w/js/2015/12/10/1449717535115-JPb9d99c9c342acbbb746afca6fd149715.js"></script>     <!-- zepto -->
+<script type="text/javascript">
+	$(function(){
+        var w=$(window).width();
+        var x=(w/375)*50;
+        $('html').css('font-size',x+'px');
+    })
+</script>
+</body>
+</html>

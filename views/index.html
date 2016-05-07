@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>聊天列表</title>
+    <meta charset='utf-8'>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <style type="text/css">
+        html {
+            -ms-touch-action: none;
+        }
+
+        * {
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        }
+
+        html, body, header, section, footer, div, h1, h2, dl, dt, dd, ul, li, p, a, b, i {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            color: #31612e;
+            font-size: 50px;
+        }
+
+        body {
+            font-family: \5FAE\8F6F\96C5\9ED1, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 12px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            display: block;
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+        }
+
+        .talkList {
+            width: 100%
+        }
+
+        .talkTip {
+            width: 100%;
+            height: 1.5rem;
+            padding: 0.25rem;
+            position: relative;
+            border-bottom: 1px solid #ccc
+        }
+
+        .headPic {
+            width: 1rem;
+            height: 1rem;
+            float: left;
+            margin-right: 0.25rem
+        }
+
+        .name {
+            position: relative;
+            float: left;
+            height: 0.4rem;
+            width: 50%;
+            font-size: 0.4rem
+        }
+
+        .time {
+            position: relative;
+            float: right;
+            height: 0.3rem;
+            font-size: 0.3rem;
+            color: #ccc
+        }
+
+        .mesg {
+            font-size: 0.3rem;
+            height: 0.7rem;
+            line-height: 0.7rem;
+            color: #ccc;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .right-con {
+            float: left;
+            overflow: hidden;
+            width: 80%
+        }
+
+        .menu {
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 1.2rem;
+            overflow: hidden;
+        }
+
+        .menu img {
+            width: 0.7rem;
+            height: 0.7rem;
+            margin-top: 0.25rem;
+            margin-left: 0.67rem;
+            float: left;
+        }
+
+        .buttom-null {
+            width: 100%;
+            height: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+<ul class="talkList">
+    <!--<%=topics%>-->
+    <% topics.forEach(function (topic){%>
+    <li class="talkTip">
+    <img class="headPic" src="http://s.momocdn.com/w/u/img/12/07/1449477996362-prize-icon.png">
+    <div class="right-con">
+    <p class="name"><%=topic.author_name%></p>
+    <p class="time"><%=topic.createdAt%></p>
+    <p style="clear:both"></p>
+    <p class="mesg"><%= topic.content%></p>
+    </div>
+    </li>
+    <% }) %>
+
+</ul>
+<div class="buttom-null"></div>
+<div class="menu">
+    <a href=""><img src="http://7xt2qz.com1.z0.glb.clouddn.com/talk.png"></a>
+    <a href="../tie/tieList.html"><img src="http://7xt2qz.com1.z0.glb.clouddn.com/tie.png"></a>
+    <a href="../zanzan/zanzan.html"><img src="http://7xt2qz.com1.z0.glb.clouddn.com/zan1b1_02.png"></a>
+    <a href="../note/note.html"><img src="http://7xt2qz.com1.z0.glb.clouddn.com/note1b1_01.png"></a>
+    <a href="../user/user.html"><img style="width:0.8rem"
+                                     src="http://7xt2qz.com1.z0.glb.clouddn.com/new-user_03.png"></a>
+</div>
+<script type="text/javascript"
+        src="http://s.momocdn.com/w/js/2015/12/10/1449717535115-JPb9d99c9c342acbbb746afca6fd149715.js"></script>
+<!-- zepto -->
+<script type="text/javascript">
+    $(function () {
+        var w = $(window).width();
+        var x = (w / 375) * 50;
+        $('html').css('font-size', x + 'px');
+    })
+</script>
+</body>
+</html>
